@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Example of an article for the RBCA Journal                %
+%                                                           %
+% Please note that whilst this template provides a          %
+% preview of the typeset manuscript for submission, it      %
+% will not necessarily be the final publication layout.     %
+%                                                           %
+% a4paper: UK paper size toggle                             %
+% alpha-refs: author-year citation and bibliography toggle  %
+% RBCA_v3.0: RBCA latex class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% below we need to define the primary language of the paper - for paper in Portuguese you must change "english" by "brazilian".
+\documentclass[alpha-refs,english]{RBCA_v3.0}
+
+% Uncomment this line if the article is in Portuguese.
+%\AtBeginDocument{\renewcommand{\harvardand}{e}}
+
+%%% Place your packages here
+%%% \usepackage[options]{package}
+
+%%%
+
+
+%%% Paper title
+\title{Animal face recognition: a systematic literature review}
+
+%%% Use the \authfn to add symbols for additional footnotes, if any. 1 is reserved for correspondence e-mails; then continuing with 2,... for contributions.
+%%% The orcid number of authors (\orcid) is optional.
+\author[1]{Kaio F. B. Garcia}
+\author[1]{Daniela F. G. Trindade\orcid{0000-0003-4428-3295}}
+\author[1]{José R. Merlin\orcid{0000-0002-9944-0537}}
+%\author[2]{Fourth Author}
+
+\affil[1]{UENP - Universidade Estadual do Norte do Paraná}
+%\affil[2]{Second Institution}
+
+%%% Author e-mails
+\authnote{\authfn{1}kaiofbgarcia@gmail.com; danielaf@uenp.edu.br; merlin@uenp.edu}
+
+%%% "Short" author for running page header - until 3 authors
+%\runningauthor{First, Second \& Third}
+
+%%% "Short" author for running page header - more than 3 authors
+\runningauthor{First et al.}    
+
+%%% Paper category:
+%%% English  : Original paper,  Experience Report     or Tutorial
+%%% Português: Artigo original, Relato de experiência ou Tutorial
+\papercat{Original Paper}
+
+%%% Editor should only set information about the issue journal and the paper
+\jvolume{11}           % volume number
+\jissue{3}             % issue number
+\jyear{2022}           % edition year
+\jmonth{November}      % edition month
+
+\setcounter{page}{1}   % number of the first page of the paper
+\firstpage{1}
+\jid{9999}             % paper ID 
+
+\jrec{yyyy-mm-dd}      % date of article submission
+\jrev{yyyy-mm-dd}      % date of final paper revision
+\jacc{yyyy-mm-dd}      % date of paper accepted
+
+
+\begin{document}
+
+\begin{frontmatter}
+	
+\maketitle
+\thispagestyle{empty}
+
+\begin{Abstract} % abstract in english
+Systematic Literature Review is a scientific study that gathers relevant works to answer the questions formulated by the author. In this article, the results of a Systematic Literature Review on the use of facial recognition in animals in various contexts (Farm, Nature, Animal Protection, etc...) are presented. The search was conducted through Google Academic and publications from the last twenty years (2012-2022) were selected and analyzed. From these literatures the research motivations, technologies used, methodology, recognition strategies, advantages of use, difficulties of application, and which animals are the focus of the literature were extracted. The benefits of using this technology are clear, a way to identify animals and collect important data about them in a non-invasive way for the animal, so the area of animal recognition is subject to a major advance, and from the results of the review it was possible to see a potential practical application of this technology, its use on farms for data collection, and the capability to identify individuals of endangered species and from this review will be done a future work that is a practical study of this technology.
+\end{Abstract}
+
+\begin{keywords}
+Face Recognition; Animals; Systematic Literature Review.
+\end{keywords}
+
+\begin{resumo} % resumo em português
+	Revisão Sistemática da Literatura consiste em um estudo científico que reúne trabalhos relevantes para responder as questões formuladas pelo autor. Neste artigo são apresentados os resultados de uma Revisão Sistemática da Literatura sobre o uso de reconhecimento facial em animais em vários contextos (Fazenda, Natureza, Proteção Animal, etc…). A pesquisa foi realizada por meio do Google Acadêmico e foram selecionadas e analisadas publicações dos últimos vinte anos (2012-2022). Destas literaturas foram extraídas as motivações da pesquisa, tecnologias utilizadas, metodologia, estratégias de reconhecimento, vantagens da utilização, dificuldades de aplicação e quais animais são o foco da literatura. Os benefícios do uso dessa tecnologias são claros, um jeito de identificar animais e coletar dados importantes sobre eles de uma maneira não invasiva ao animal por isso a área do reconhecimento de animais está sujeita a um grande avanço e pelos resultados da revisão foi possível notar um potencial de aplicação prática nessa tecnologia, seu uso em fazendas para a coleta de dados, sua capacidade de identificar indivíduos de espécies ameaçadas e a partir dessa revisão será feito um trabalho futuro que se trata de um estudo prático dessa tecnologia.
+\end{resumo}
+
+\begin{palavras_chave} % palavras-chave em português 
+	Reconhecimento Facial; Animais; Revisão Sistemática da Literatura.
+\end{palavras_chave}
+
+\end{frontmatter}
+
+
+\section{Introduction}
+Face recognition is the technique where it is possible to recognize characteristic patterns of humans and animals faces. When applied in the area of animal husbandry farms can be used to identify, monitor, and to obtain individual data and thus assist in their care.
+
+Among the methods of identification and recognition in use, facial recognition is the unique non-invasive to animals, i.e., it is a technique which doesn’t cause any physical harm to individuals, different from other techniques frequently used. The identifying earrings and RFID tags are examples of methods which cause pain in the application because they need to be attached to the animal and can cause infections at the area over time. 
+
+The technology has the potential to assist in research involving wild and endangered animals, performing tasks such as monitoring, identifying, and cataloging the individuals of various species, for example.
+
+\section{Methodology}
+The following steps were followed to produce this work: Planning, Conducting, and Presenting the Results. The methodology used in this work was based on the one proposed by Barbara Kitchenham in the 2004 article “Procedures for performing systematic reviews”\citet{Kitchenham2004}, but some changes and modernizations were made throughout the work, because it is a study of a very current technological area.
+
+\section{Research Questions}
+Some questions were elaborated in order to be able to present relevant information about the topic (Animal Face Recognition).
+\begin{itemize}
+	\item \textbf{RQ1:} What is the application area of the algorithms?
+	\item \textbf{RQ2:} What is the motivation for using facial recognition?
+	\item \textbf{RQ3:} Which animals are identified by the algorithms?
+
+	\item \textbf{RQ4:} What is the strategy to do the recognition?
+	\item \textbf{RQ5:} What are the challenges of applying this method?
+	\item \textbf{RQ6:} Which technologies were used in the development?
+	\item \textbf{RQ7:} What methodology was applied?
+\end{itemize}
+
+\section{Search Process}
+The literature search was done using Google Academics, giving priority to papers written in English. Some of these articles were available in full and others were accessed via the university access. Next we have the sources where the articles are published and their acronyms used for identification throughout the paper: \textcolor{gray}{Computers and Electronics in Agriculture (CEA), Association for Computing Machinery (ACM), Agricultural Information Institute of CAAS (AIICAAS), Gazi University Journal of Science (GUJS), International Journal of Advanced Computer Science and Applications (IJACSA), 2015 Third International Conference on Image Information Processing (ICIIP), Institute of Electrical and Electronics Engineers (IEEE), Annals of the Romanian Society for Cell Biology (ARSCB), Proceedings of the National Academy of Sciences (PNAS), IOP Conference Series: Earth and Environmental Science (IOPCS), American Society of Agricultural and Biological Engineers (ASABE), ITE Transactions on Media Technology and Applications (ITETMTA), Mathematical Problems in Engineering (MPE), Ecology and Evolution (EE), Universidade de Caxias do Sul - Área do Conhecimento de Ciências Exatas e Engenharias (UCS), BMC Zoology (BMCZ), Journal of Physics: Conference Series (JPCS), Computers in Industry (CI) and Science Advances (SA).}
+
+\subsection{Inclusion and Exclusion Criteria}
+The search process was divided into two parts. First, the titles and abstracts were read and analyzed to select those that fit the theme, and about thirty were chosen. Then the selected articles were read and the inclusion and exclusion criteria, presented below, were applied, resulting in twenty selected articles. \\ \\
+\textbf{Inclusion Criteria:}
+\begin{itemize}
+	\item \textbf{IC1:}  Publications between 2012 and 2022.
+	\item \textbf{IC2:} Written in English (exception made for T15).
+	\item \textbf{IC3:} Papers that make use of Facial Recognition in Animals.
+	\item \textbf{IC4:} Preference for free papers, or possible to access with the university.
+\end{itemize}
+\textbf{Exclusion Criteria:}
+\begin{itemize}
+	\item \textbf{EC1:}  Publications prior to 2012.
+	\item \textbf{EC2:} Duplicate papers or old versions.
+	\item \textbf{EC3:} Papers that are not consistent with the topic.
+	\item \textbf{EC4:} Languages other than English or Portuguese.
+\end{itemize}
+
+\subsection{Data Extraction}
+Next we have the information relevant to the review that was extracted from the selected literature: \\ \\
+\textbf{Papers Information:}
+\begin{itemize}
+	\item Reference, event, or place of publication.
+	\item Objectives of the work.
+	\item Content covered.
+	\item Technologies used.
+	\item Results.
+\end{itemize}
+
+The data collected was stored in spreadsheets and in notes for use in the next stages of the review.
+
+\subsection{Quality Evaluation}
+According to author Barbara Kitchenham, the application of Quality Assessment (QA) is a complementary way of evaluating and ensuring the quality of primary studies, in addition to the inclusion and exclusion criteria. It is intended to be used as a way of weighing the importance of individual studies and ensuring that they have relevance to the developed review.
+\begin{itemize}
+	\item \textbf{AQ1:}  Do the studies present the tests of the developed algorithms?
+	\item \textbf{AQ2:} Do the studies clearly present their objectives?
+	\item \textbf{AQ3:} Do the studies adequately present the utilized technologies?
+	\item \textbf{AQ4:} Do the studies clearly expose the results obtained?
+\end{itemize}
+
+These were the QA criteria used to evaluate the relevance of the papers, those that did not fit would be discarded, but all twenty papers were successful in these requirements, which shows that their data are well presented and have relevance to this review.
+
+
+\begin{table*}
+\caption{Primary studies selected}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{c
+>{\columncolor[HTML]{FCFCFC}}l c
+>{\columncolor[HTML]{FCFCFC}}c }
+\cellcolor[HTML]{B7B7B7}\textbf{ID} & \multicolumn{1}{c}{\cellcolor[HTML]{B7B7B7}\textbf{Title / Reference}} & \cellcolor[HTML]{B7B7B7}\textbf{Source} & \cellcolor[HTML]{B7B7B7}\textbf{Year} \\
+\textbf{T1} & An adaptive pig face recognition approach using Convolutional Neural Networks / \citet{MARSOT2020105386} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} CEA} & 2020 \\
+\textbf{T2} & Cow Face Detection and Recognition Based on Automatic Feature Extraction Algorithm / \citet{10.1145/3321408.3322628} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} ACM} & 2019 \\
+\textbf{T3} & Deep Cross-Species Feature Learning for Animal Face Recognition via Residual Interspecies Equivariant Network / \citet{10.1007/978-3-030-58583-9_40} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} AIICAAS} & 2020 \\
+\textbf{T4} & Deep Learning-Based Architectures for Recognition of Cow Using Cow Nose Image Pattern  / \citet{gujs605631} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} GUJS} & 2020 \\
+\textbf{T5} & Image-based Individual Cow Recognition using Body Patterns / \citet{Bello2020} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} IJACSA} & 2020 \\
+\textbf{T6} & Face Recognition of Cattle / \citet{inproceedings} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} ICIIP} & 2015 \\
+\textbf{T7} & Giant Panda Face Recognition Using Small Dataset / \citet{8803125} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} IEEE} & 2019 \\
+\textbf{T8} & Creature Face Recognition Using Neural Networks / \citet{Marthur2021} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} ARSCB} & 2021 \\
+\textbf{T9} & Face Recognition of Cattle: Can it be Done? / \citet{Kumar2016} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} PNAS} & 2016 \\
+\textbf{T10} & Research on pig face recognition model based on keras convolutional neural network / \citet{Wang_2020} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} IOPCS} & 2020 \\
+\textbf{T11} & Pig Face Recognition Model Based on a Cascaded Network / \citet{article} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} ASABE} & 2021 \\
+\textbf{T12} & Pig Face Recognition Using Eigenspace Method / \citet{NaokiWada2013} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} ITETMTA} & 2013 \\
+\textbf{T13} & Open Set Sheep Face Recognition Based on Euclidean Space Metric / \citet{Xue2021} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} MPE} & 2021 \\
+\textbf{T14} & Automated facial recognition for wildlife that lack unique markings: A deep learning approach for brown bears / \citet{Clampham2020} & {\color[HTML]{555555} EE} & 2020 \\
+\textbf{T15} & Reconhecimento facial bovino: uma alternativa aos métodos tradicionais de rastreio / \citet{Brito2021} & {\color[HTML]{555555} UCS} & 2021 \\
+\textbf{T16} & LemurFaceID: a face recognition system to facilitate individual identification of lemurs / \citet{Crouse2017} & {\color[HTML]{555555} BMCZ} & 2017 \\
+\textbf{T17} & A pig face recognition method for distinguishing features / \citet{9421289} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} IEEE} & 2021 \\
+\textbf{T18} & Fast Recognition of Pig Faces Based on Improved Yolov3 / \citet{Li_2022} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} JPCS} & 2022 \\
+\textbf{T19} & Towards on-farm pig face recognition using convolutional neural networks / \citet{HANSEN2018145} & \cellcolor[HTML]{FCFCFC}{\color[HTML]{555555} CI} & 2018 \\
+\textbf{T20} & Chimpanzee face recognition from videos in the wild using deep learning / \citet{Schofield2019} & {\color[HTML]{555555} SA} & 2019
+\end{tabular}
+}
+\end{table*}
+
+\section{RQ Results}
+The results obtained through an analysis on the answers of the proposed RQs are presented below, the identifiers of the papers follow Table 1.
+
+\subsection{RQ1 - What is the application area of the algorithms?}
+Seventy percent (70\%) (14) of the reviewed papers [T1, T2, T4, T6, T9, T10, T11, T12, T13, T15, T17, T18, and T19] contain algorithms that have been or will be applied on livestock farms with a focus on improving animal control, welfare and health. 
+
+In addition to farms, thirty percent (30\%) (6) [T3, T7, T8, T14, T16, and T20] were made to assist in the surveillance and/or protection of rare animals, also acting in studies involving wild species such as lemurs or pandas, animals studied among the literatures.
+
+\subsection{RQ2 - What is the motivation for using facial recognition?}
+The algorithms proposed in eighty percent (80\%) (16) of the papers [T1, T2, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T15, T17, T18, and T19] were created to replace outdated methods of tracking and identifying animals, both on farms and wild animals under observation. RFID tags were cited in six papers as the most used method, but they have their disadvantages, such as pain in application, chance of infection, and the fact cited in the paper "Towards on-farm pig face recognition using convolutional neural networks", that says the tag has a maximum reading distance (120cm). 
+
+In these sixteen papers, which represent the eighty percent cited above, the improvements that the use of the proposed algorithms would bring are discussed, such as the advancement in animal welfare control (health, food safety, etc.), the increase in production (in the case of dairy cows), crime prevention, among other improvements.
+
+In addition to the focus on farm animals, this technology was also featured in twenty percent (20\%) (4) of the papers [T3, T14, T16, and T20] being used to monitor wild animals entering urban areas, in short or long term conservation and investigation of animals in their habitats, collecting data such as the presence, abundance, distribution, and behavior of wild species.
+
+\subsection{RQ3: Which animals are identified by the algorithms?}
+Among all the articles found, some kind of animal was the "focus" of the research and development of recognition, some as mentioned in the previous QR, from these animals, pigs were the most highlighted animals, being the focus of recognition in thirty-five percent (35\%) (7) of the works [T1, T10, T11, T12, T17, T18, and T19], while cattle were in thirty percent (30\%) (6) [T2, T4, T5, T6, T9, and T15]. 
+
+Sheep and other more exotic species such as brown bears [T14], pandas [T7], lemurs [T16], and chimpanzees [T20], appeared in only one of the literatures and each one has five percent (5\%) of presence in the total works and finally two publications [T3 and T8] left open which animal would be recognized, ten percent (10\%).
+
+\subsection{RQ4: What is the strategy to do the recognition?}
+Among the strategies found, almost all the works (90\%) [T1, T2, T3, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20] chose to follow the pattern and search for features on the animals' faces and analyze them to obtain the results. But T4 and T5 followed two different strategies, where T4 performed the recognition based on "fingerprints" found on the bovine's snouts, analyzing the patterns in their relief, their depressions and elevations. Finally, T5 brought an analysis on the patterns of spots found on the cattle's hides, thus analyzing them to obtain a pattern and provide a result.
+
+\subsection{RQ5: What are the challenges of applying this method?}
+As with every creation process the authors of the papers experienced challenges and difficulties when developing the algorithms, the main and most encountered was during the initial acquisition phase, where seventy-five percent (75\%) (15) of the papers [T1, T2, T3, T4, T5, T6, T7, T9, T10, T12, T13, T14, T15, T19, and T20] encountered obstacles in this phase which is of paramount importance for recognition. 
+
+In the acquisition phase of the data that will be analyzed, some difficulties were encountered in dealing with variables that may appear during the acquisition of data for training and testing, among these variables we can highlight some such as lighting and image background, position of the animal, dirt and other things that can obstruct the animal's face. The low quality and quantity of data to perform training was a frequent problem in works that focused on monitoring wild animals, pandas for example [T7], which lack of datasets because it is a rare species.
+
+Moving on to the next phases we have some difficulties such as classification of very similar animals [T11], extracting few features from faces [T17], difficulties with monitoring [T16] and low recognition accuracy [T18], each of these problems were found in one (5\% each) of the papers. Finally, one paper (5\%) [T8] did not present data about challenges or difficulties encountered.
+
+\subsection{RQ6: Which technologies were used in the development?}
+The main technology used was certainly the convolutional neural networks (CNN), which were present in 70\% of the articles [T1, T2, T3, T4, T5, T8, T10, T11, T13, T14, T17, T18, T19, T20]. This is an artificial intelligence and machine learning technology, where it is a feed-forward artificial neural network, which has been successfully applied to the processing and analysis of digital images and facial recognition of both animals and humans. 
+Python was also a major player, being the most used programming language among the papers, 45\% of the papers [T1, T2, T5, T10, T11, T14, T15, T19, T20] presented the use of Python or libraries (OpenCV for example), many of the articles reviewed did not present the language used, but by the analyses probably in some step Python was used.
+
+It is worth mentioning some of the technologies that did not appear in the papers as frequently, such as ResNet (Residual Neural Network) [T14, T17], PCA (Principal Component Analysis) [T6, T8, T9, T12, T15], Keras (open source neural network library written in Python) [T10, T11], Haar Cascade Classifier (Object Detection Algorithm used to identify faces in an image or a real time video) [T1], CUDA [T11] and Gaussian Filter / Pyramid [T5, T9].
+
+\subsection{RQ7: What methodology was applied?}
+All the analyzed works follow the standard steps of a recognition algorithm, apart from some variations, but basically it boils down to the initial phase responsible for finding the animal's face, or the part that you want to analyze, in the middle of the image, the next is where you must treat this face with pre-processing techniques such as rotate, scale, crop and normalize. After that we proceed to the feature extraction phase where the images go through an extraction algorithm and the salient features are obtained and passed to the next phase, where they are compared with data from banks or test data, in the classification phase and finally the results are presented. 
+
+The variations found in the works were that some did some actions before treating the image, as in T16 for example where it is made a marking in the eyes of the animals, the T13 that performs an alignment of the face to avoid the angle variable that as seen in RQ4 is one of the factors that can cause interference in recognition.
+
+\section{Validity Threats}
+During the construction of the systematic review, some choices are made by the author, such as in the application of the inclusion/exclusion criteria and in the extraction/interpretation of data from the selected studies. These decisions made by the author during the preparation of the review have a direct influence on the results obtained. But the risks were minimized because the results were presented and reviewed by the author and the mentor/co-author in order to ensure the consistency and validity of the results.
+
+\section{Final Considerations}
+The area of animal recognition is subject to a major advance, this technology was first applied to humans and reached the level of development we are today, now the trend is to use it in other ways while new ones are emerging to "replace", its benefits are clear, a way to collect data and identify a non-invasive way to the animal, in other words, without causing any harm to it, is the way we should start thinking for our sustainable development.
+
+Through this review it was possible to notice a potential of practical application in this technology, its use in farms for data collection, its ability to identify individuals of endangered species, among other practical uses shows that its study is a logical path to follow. Based on this review, a future work will be done, which is a practical study of this technology, developed as a course conclusion work.
+
+
+\section*{Acknowledgments}
+
+We thank CNPq, which provided an initiation scholarship for the development of this work, and all the professors that oriented me and help in this project, especially Prof. José Reinaldo Merlin, who proposed the theme of this article.
+
+%% Specify your .bib file name here, without the extension .bib
+\bibliography{references} 
+
+\end{document}
